@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake Game</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="game-container">
-        <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+  <div class="container">
+    <h1 class="title">🐍 Snake Game</h1>
+
+    <div class="hud">
+      <div class="hud-box">Score: <span id="score">0</span></div>
+      <div class="hud-box">Best: <span id="highscore">0</span></div>
+      <div class="hud-box">Level: <span id="level">1</span></div>
     </div>
-    <script src="script.js"></script>
+
+    <div class="canvas-wrapper">
+      <canvas id="gameCanvas" width="420" height="420"></canvas>
+      <div class="overlay" id="overlay">
+        <div class="overlay-content">
+          <p id="overlay-title">Snake Game</p>
+          <p id="overlay-sub">Arrow keys se khelo</p>
+          <button id="startBtn">▶ Start Game</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls-info">
+      <span>⬆⬇⬅➡ Move</span>
+      <span>Space = Pause</span>
+      <span>R = Restart</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
